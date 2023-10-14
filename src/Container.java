@@ -22,9 +22,10 @@ class Container {
 	public int maxArea(int[] height) {
 		int n = height.length;
 		int maxArea = 0;
-		int leftIndex =1;
+		int leftIndex =0;
 		int rightIndex = n-1;
-		while(rightIndex> leftIndex) {
+		while(leftIndex < rightIndex) {
+			System.out.println(height[leftIndex]+" "+height[rightIndex]);
 			int tmp = (rightIndex-leftIndex)*Math.min(height[leftIndex], height[rightIndex]);
 			maxArea = Math.max(maxArea, tmp);
 			if(height[leftIndex] < height[rightIndex]) {
@@ -33,6 +34,7 @@ class Container {
 			else {
 				rightIndex--;
 			}
+
 		}
 		
 		
