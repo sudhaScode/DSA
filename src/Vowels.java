@@ -1,0 +1,29 @@
+
+import java.util.*;
+
+class Vowels {
+    // NOTE: Please do not modify this function
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        int vowels = countVowels(str);
+        System.out.println(vowels);
+    }
+
+    // TODO: Implement this method
+    static int countVowels(String str) {
+        // convert to lowecase
+        str= str.toLowerCase();
+        int result=0;
+        //iterate through the string
+        //check with a e i o u
+        // if true increment resuslt+1
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o'|| str.charAt(i) == 'u'){
+           result +=1;
+            }
+        }
+        return result;
+    }
+}
